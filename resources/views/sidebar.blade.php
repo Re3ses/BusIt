@@ -8,24 +8,24 @@
                 <a class="fa-solid fa-house"><span class="sidebar-txt">Home</span></a>
             </li>
             <li>
-                <a class="fa-solid fa-house"><span class="sidebar-txt">Routes</span></a>
+                <a class="fa-solid fa-bus"><span class="sidebar-txt">Routes</span></a>
             </li>
             <li>
-                <a class="fa-solid fa-house"><span class="sidebar-txt">Weather</span></a>
+                <a class="fa-solid fa-cloud"><span class="sidebar-txt">Weather</span></a>
             </li>
             <li>
-                <a class="fa-solid fa-house"><span class="sidebar-txt">News</span></a>
+                <a class="fa-solid fa-newspaper"><span class="sidebar-txt">News</span></a>
             </li>
             <li>
-                <a class="fa-solid fa-house"><span class="sidebar-txt">Map</span></a>
+                <a class="fa-solid fa-map"><span class="sidebar-txt">Map</span></a>
             </li>
             <li>
-                <a class="fa-solid fa-house"><span class="sidebar-txt">About</span></a>
+                <a class="fa-solid fa-circle-info"><span class="sidebar-txt">About</span></a>
             </li>
         </ol>
-        <a href="#" class="">
+        <a href="#" class="pb-4">
             <button type="button" class="bg-transparent">
-                <i class="fa-solid fa-gear"></i>
+                <i class="fa-solid fa-gear"><span class="sidebar-txt">Settings</span></i>
             </button>
         </a>
     </div>

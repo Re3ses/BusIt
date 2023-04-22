@@ -29,7 +29,8 @@ main {
     left: 0;
     width: 4vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.473);
+    background-color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
 }
 
 .sidebar button {
@@ -61,8 +62,9 @@ main {
     text-decoration: none;
 }
 
-.sidebar-btns span {
+.sidebar-txt {
     font-family: 'Outfit', sans-serif;
+    font-weight: 400;
     position: absolute;
     display: none;
     margin-left: 3vw;
@@ -71,6 +73,7 @@ main {
 .content {
     z-index: -15;
     background-image: url(https://source.unsplash.com/featured);
+    background-size: cover;
     width: 100vw;
     height: 100vh;
 }
