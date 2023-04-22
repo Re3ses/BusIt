@@ -1,14 +1,34 @@
-let sidebar_col = document.getElementById("sidebar-col");
-let sidebar_exp = document.getElementById("sidebar-exp");
+let sidebar = document.getElementById("sidebar");
+let hiddenElements = document.querySelectorAll(".sidebar-txt");
+let width = 4;
 let hidden = true;
 
 function expand() {
-    if (hidden) {
-        sidebar_exp.style.display = "block";
-        sidebar_col.style.display = "none";
-    } else {
-        sidebar_exp.style.display = "none";
-        sidebar_col.style.display = "block";
-    }
+    animate(hidden);
+
+    hiddenElements.forEach(element => {
+        if (hidden) {
+          element.style.display = 'inline';
+        } else {
+          element.style.display = 'none';
+        }
+      });
+
     hidden = !hidden;
+}
+
+function animate(toExpand) {
+    if (toExpand === true) {
+        width++;
+        sidebar.style.width = width + "vw";
+        if (width < 15) {
+            requestAnimationFrame(() => animate(toExpand));
+        }
+    } else {
+        width--;
+        if (width >= 4) {
+        sidebar.style.width = width + "vw";
+            requestAnimationFrame(() => animate(toExpand));
+        }
+    }
 }

@@ -12,6 +12,9 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
 
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/9fa7882ce0.js" crossorigin="anonymous"></script>
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -22,13 +25,11 @@
 <body>
     <div id="app">
         <main>
-            <div class="row d-flex">
-                <div class="col">
-                    @include('sidebar')
-                </div>
-                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                    @yield('content')
-                </div>
+            <div class="sidebar">
+                @include('sidebar')
+            </div>
+            <div class="content">
+                @yield('content')
             </div>
         </main>
     </div>
