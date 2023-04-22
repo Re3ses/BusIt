@@ -1,21 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
 body {
     background-color: blue;
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sidebar {
-    width: auto;
-}
-
-.sidebar-collapsed {
     height: 100vh;
-    width: 60px;
-    background-color: #0e0e0e70;
-}
-
-.sidebar-expanded {
+    width: 4vw;
     position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-wrapper {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-extension {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4vw;
     height: 100vh;
-    width: 200px;
-    background-color: #0e0e0e70;
-    display: block;
+    background-color: rgba(0, 0, 0, 0.473);
+}
+
+.sidebar button {
+    z-index: 15;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+    border: 0;
+}
+
+.sidebar-btns {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-btns li {
+    margin: 5px auto;
+    font-size: 1.5rem;
+}
+
+.sidebar-btns a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar-btns span {
+    font-family: 'Outfit', sans-serif;
+    position: absolute;
+    display: none;
+    margin-left: 3vw;
+}
+
+.content {
+    z-index: -15;
+    background-image: url(https://source.unsplash.com/featured);
+    width: 100vw;
+    height: 100vh;
 }
