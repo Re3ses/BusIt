@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Bus_Data;
+use App\Models\Bus_Drivers;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class Bus_DriversFactory extends Factory
 {
+    protected $model = Bus_Drivers::class;
     /**
      * Define the model's default state.
      *

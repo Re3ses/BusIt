@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Bus_Routes;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -9,6 +10,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class Bus_RoutesFactory extends Factory
 {
+    protected $model = Bus_Routes::class;
     /**
      * Define the model's default state.
      *

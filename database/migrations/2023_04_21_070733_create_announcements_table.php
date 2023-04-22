@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('announcements', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->longText('announcement_text')->default('text');
+            $table->integer('user_id');
+            $table->longText('announcement_text');
+            $table->date('announcement_date');
             $table->string('announcement_author');
             $table->string('announcement_title');
         });

@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class AnnouncementsFactory extends Factory
 {
+    protected $model = Announcements::class;
     /**
      * Define the model's default state.
      *
@@ -20,11 +21,10 @@ class AnnouncementsFactory extends Factory
     {
         return [
             'user_id' => User::factory(),
-            'announcement_text' => $this->faker->paragraphs($nb = 3, $asText = false),
+            'announcement_text' => $this->faker->paragraph(),
             'announcement_date' => $this->faker->dateTimeThisMonth(),
             'announcement_author' => $this->faker->name(),
-            'announcement_title' => $this->faker->word(),
-
+            'announcement_title' => $this->faker->word()
         ];
     }
 }
