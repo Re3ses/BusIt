@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Bus_Routes extends Model
 {
     use HasFactory;
+
+    public function Bus_Trips(){
+        return $this->hasMany(Bus_Trips::class);
+    }
 }

@@ -2,18 +2,18 @@
 
 namespace Database\Seeders;
 
-//use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\Bus_Drivers;
+use App\Models\Bus_Trips;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class Bus_DriversSeeder extends Seeder
+class Bus_TripsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run()
     {
-        Bus_Drivers::factory()
+        Bus_Trips::factory()
             ->count(25)
             ->create();
     }

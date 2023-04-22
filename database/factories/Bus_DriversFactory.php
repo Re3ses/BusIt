@@ -26,7 +26,7 @@ class Bus_DriversFactory extends Factory
             'driver_licensenumber' => $this->faker->creditCardNumber(),
             'driver_licenseexpirydate' => $this->faker->dateTimeBetween('now', '+3 years'),
             'driver_dateofbirth' => $this->faker->dateTimeThisCentury(),
-            'driver_isactive' => $this->faker->$status
+            'driver_isactive' => $status
         ];
     }
 }
