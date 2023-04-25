@@ -4,22 +4,22 @@
             <i class="fa-solid fa-bars"></i>
         </button>
         <ol class="sidebar-btns d-flex flex-column align-items-center pt-4">
-            <li>
+            <li class="sidebar-button">
                 <a class="fa-solid fa-house"><span class="sidebar-txt">Home</span></a>
             </li>
-            <li>
+            <li class="sidebar-button">
                 <a class="fa-solid fa-bus"><span class="sidebar-txt">Routes</span></a>
             </li>
-            <li>
+            <li class="sidebar-button">
                 <a class="fa-solid fa-cloud"><span class="sidebar-txt">Weather</span></a>
             </li>
-            <li>
+            <li class="sidebar-button">
                 <a class="fa-solid fa-newspaper"><span class="sidebar-txt">News</span></a>
             </li>
-            <li>
+            <li class="sidebar-button">
                 <a class="fa-solid fa-map"><span class="sidebar-txt">Map</span></a>
             </li>
-            <li>
+            <li class="sidebar-button">
                 <a class="fa-solid fa-circle-info"><span class="sidebar-txt">About</span></a>
             </li>
         </ol>
