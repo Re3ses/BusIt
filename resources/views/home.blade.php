@@ -5,7 +5,7 @@
         @include('sections.landing')
     </section>
     <section class="w-100 vh-100" id="routes">
-        
+        @include('sections.routes')
     </section>
     <section class="w-100 vh-100" id="weather">
         

@@ -96,3 +96,15 @@ main {
     font-size: 3rem;
     margin: auto;
 }
+
+.routes { 
+    padding-left: 4vw;
+    background-image: url("/images/bicolTerminal.png");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.table-bg {
+    background-color: hsla(0, 0%, 0%, 0.25);
+}
