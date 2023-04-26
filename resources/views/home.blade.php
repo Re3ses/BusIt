@@ -14,7 +14,7 @@
         
     </section>
     <section class="w-100 vh-100" id="map">
-        {
+        
     </section>
     <section class="w-100 vh-100" id="about">
         
