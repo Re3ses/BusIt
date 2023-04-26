@@ -91,3 +91,8 @@ main {
     height: 64px;
     width: auto;
 }
+
+.weather-icon {
+    font-size: 3rem;
+    margin: auto;
+}

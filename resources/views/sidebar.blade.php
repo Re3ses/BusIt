@@ -5,10 +5,10 @@
         </button>
         <ol class="sidebar-btns d-flex flex-column align-items-center pt-4">
             <li class="sidebar-button">
-                <a class="fa-solid fa-house"><span class="sidebar-txt">Home</span></a>
+                <a class="fa-solid fa-house" href="#landing"><span class="sidebar-txt">Home</span></a>
             </li>
             <li class="sidebar-button">
-                <a class="fa-solid fa-bus"><span class="sidebar-txt">Routes</span></a>
+                <a class="fa-solid fa-bus" href="#routes"><span class="sidebar-txt">Routes</span></a>
             </li>
             <li class="sidebar-button">
                 <a class="fa-solid fa-cloud"><span class="sidebar-txt">Weather</span></a>
