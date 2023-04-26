@@ -11,16 +11,16 @@
                 <a class="fa-solid fa-bus" href="#routes"><span class="sidebar-txt">Routes</span></a>
             </li>
             <li class="sidebar-button">
-                <a class="fa-solid fa-cloud"><span class="sidebar-txt">Weather</span></a>
+                <a class="fa-solid fa-cloud" href="#weather"><span class="sidebar-txt">Weather</span></a>
             </li>
             <li class="sidebar-button">
-                <a class="fa-solid fa-newspaper"><span class="sidebar-txt">News</span></a>
+                <a class="fa-solid fa-newspaper" href="#news"><span class="sidebar-txt">News</span></a>
             </li>
             <li class="sidebar-button">
-                <a class="fa-solid fa-map"><span class="sidebar-txt">Map</span></a>
+                <a class="fa-solid fa-map" href="#map"><span class="sidebar-txt">Map</span></a>
             </li>
             <li class="sidebar-button">
-                <a class="fa-solid fa-circle-info"><span class="sidebar-txt">About</span></a>
+                <a class="fa-solid fa-circle-info" href="#about"><span class="sidebar-txt">About</span></a>
             </li>
         </ol>
         <a href="#" class="pb-4">
