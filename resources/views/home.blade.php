@@ -1,13 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="w-100 vh-100" id="landing">
+    <section class="w-100 vh-100 mb-5 landing" id="landing">
         @include('sections.landing')
     </section>
-    <section class="w-100 vh-100" id="routes">
+    {{-- <div class="separator w-100"></div> --}}
+    <section class="w-100 vh-100 my-5 routes" id="routes">
         @include('sections.routes')
     </section>
-    <section class="w-100 vh-100" id="weather">
+    <section class="w-100 vh-50 weather" id="weather">
         
     </section>
     <section class="w-100 vh-100" id="news">
