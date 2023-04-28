@@ -114,6 +114,11 @@ div, section {
     width: 100%;
 }
 
+.routeSelector {
+    width: 4rem;
+    height: 2rem;
+}
+
 .table-bg {
     background-color: hsla(0, 0%, 0%, 0.25);
 }
