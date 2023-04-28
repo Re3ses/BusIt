@@ -83,17 +83,19 @@ div, section {
     margin: 0;
 }
 
-.separator {
-    height: 15vh;
-    background-color: rgb(255, 255, 255);
+.content section {
+    padding-left: 4vw;
 }
 
+/* .separator {
+    height: 15vh;
+    background-color: rgb(255, 255, 255);
+} */
+
+
 .landing { 
-    padding-left: 4vw;
     background-image: url("/images/pexels-chriz-luminario-2798477.jpg");
     background-size: cover;
-    height: 100%;
-    width: 100%;
 }
 
 .busit-logo {
@@ -107,16 +109,9 @@ div, section {
 }
 
 .routes { 
-    padding-left: 4vw;
     background-image: url("/images/bicolTerminal.png");
     background-size: cover;
-    height: 100%;
-    width: 100%;
-}
-
-.routeSelector {
-    width: 4rem;
-    height: 2rem;
+    height: 75vh;
 }
 
 .table-bg {
