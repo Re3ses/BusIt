@@ -14,12 +14,8 @@ return new class extends Migration
         Schema::create('bus__drivers', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('driver_firstname');
-            $table->string('driver_lastname');
+            $table->string('driver_name');
             $table->string('driver_contactnumber');
-            $table->string('driver_licensenumber');
-            $table->string('driver_licenseexpirydate');
-            $table->date('driver_dateofbirth');
             $table->string('driver_isactive'); //Active or Inactive
         });
     }

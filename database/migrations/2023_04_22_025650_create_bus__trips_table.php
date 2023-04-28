@@ -14,11 +14,13 @@ return new class extends Migration
         Schema::create('bus__trips', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('route_id');
             $table->integer('bus_id');
             $table->integer('driver_id');
             $table->integer('user_id');
-            $table->dateTime('departure_date');
+            $table->time('departure_time');
+            $table->time('arrival_time');
+            $table->smallInteger('route_fare');
+            $table->string('route_destination');
         });
     }
 

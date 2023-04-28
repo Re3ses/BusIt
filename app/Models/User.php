@@ -42,10 +42,6 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function Announcements(){
-        return $this->hasMany(Announcements::class);
-    }
-
     public function Bus_Trips(){
         return $this->hasMany(Bus_Trips::class);
     }

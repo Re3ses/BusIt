@@ -20,12 +20,8 @@ class Bus_DriversFactory extends Factory
     {
         $status = $this->faker->randomElement(['active', 'inactive']);
         return [
-            'driver_firstName' => $this->faker->name(),
-            'driver_lastname' => $this->faker->lastname(),
+            'driver_name' => $this->faker->name(),
             'driver_contactnumber' => $this->faker->tollFreePhoneNumber(),
-            'driver_licensenumber' => $this->faker->creditCardNumber(),
-            'driver_licenseexpirydate' => $this->faker->dateTimeBetween('now', '+3 years'),
-            'driver_dateofbirth' => $this->faker->dateTimeThisCentury(),
             'driver_isactive' => $status
         ];
     }
