@@ -13,7 +13,7 @@ main {
 }
 
 div, section {
-    box-shadow: none;
+    box-shadow: none  ;
 }
 
 .sidebar {
