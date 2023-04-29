@@ -1,5 +1,6 @@
 <div class="container-fluid p-5 h-100">
-    <div class="row table-bg rounded h-100 flex-column">
+    <div class="row"><h1 class="p3">Routes</h1></div>
+    <div class="row table-bg rounded flex-column">
         <div class="col-2 py-3">
             <select class="form-select form-select-sm " name="routeSelector" id="routeSelector"
                 aria-label="Default select example">
