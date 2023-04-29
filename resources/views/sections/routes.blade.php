@@ -33,12 +33,6 @@
                 </tr>
             </tbody>
 
-            <select id="table-select">
-                <option value="table1">Table 1</option>
-                <option value="table2">Table 2</option>
-                <option value="table3">Table 3</option>
-            </select>
-
             {{-- SAMPLE CODE FOR TABLE --}}
             {{-- <table id="table-data">
                 <thead>

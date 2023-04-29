@@ -87,11 +87,9 @@ div, section {
     padding-left: 4vw;
 }
 
-/* .separator {
-    height: 15vh;
-    background-color: rgb(255, 255, 255);
-} */
-
+.inset-shadow {
+    box-shadow: .5rem .5rem 1rem rgba($black, .5) inset;
+}
 
 .landing { 
     background-image: url("/images/pexels-chriz-luminario-2798477.jpg");
@@ -116,4 +114,11 @@ div, section {
 
 .table-bg {
     background-color: hsla(0, 0%, 0%, 0.25);
+}
+
+.weather {
+    background-image: url("/images/pexels-pixabay-158827.jpg");
+    background-size: cover;
+    height: 25vh;
+    
 }

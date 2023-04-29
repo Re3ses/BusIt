@@ -5,10 +5,10 @@
         @include('sections.landing')
     </section>
     {{-- <div class="separator w-100"></div> --}}
-    <section class="w-100 my-5 routes shadow" id="routes">
+    <section class="w-100 mt-5 routes shadow inset-shadow" id="routes">
         @include('sections.routes')
     </section>
-    <section class="w-100 vh-100 weather shadow" id="weather">
+    <section class="w-100 weather shadow inset-shadow" id="weather">
         @include('sections.weather')
     </section>
     <section class="w-100 vh-100 news shadow" id="news">
