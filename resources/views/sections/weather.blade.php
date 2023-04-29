@@ -1,5 +1,5 @@
-<div class="container-fluid flex-column h-100 w-100">
-    <div class="row p-3">
+<div class="container-fluid flex-column p-5 h-100 w-100 ">
+    <div class="row px-3">
         <h1 class="fs-1">Weather</h1>
     </div>
     <div class="row px-5">
@@ -12,7 +12,7 @@
         </div>
         <div class="col-6">
             <p>Temperature: {{ $temperature }} C</p>
-            <p>Humidity: {{ $humidity }}</p>
+            <p>Humidity: {{ $humidity }}%</p>
             <p>Rain: {{ $rain }}</p>
         </div>
     </div>
