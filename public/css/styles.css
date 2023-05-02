@@ -17,6 +17,7 @@ div, section {
 }
 
 .sidebar {
+    z-index: 999;
     height: 100vh;
     width: 4vw;
     position: fixed;
@@ -94,6 +95,7 @@ div, section {
 .landing { 
     background-image: url("/images/pexels-chriz-luminario-2798477.jpg");
     background-size: cover;
+    z-index: 1;
 }
 
 .busit-logo {
@@ -119,6 +121,7 @@ div, section {
 
 .weather {
     /* background-image: url("/images/pexels-pixabay-158827.jpg"); */
+    background-color: rgb(253, 253, 255);
     background-size: cover;
     height: 25vh;
 }

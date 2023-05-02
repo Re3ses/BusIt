@@ -4,7 +4,7 @@
     <section class="w-100 vh-100 landing shadow" id="landing">
         @include('sections.landing')
     </section>
-    <section class="w-100 weather inset-shadow" id="weather">
+    <section class="w-100 mb-5 weather inset-shadow" id="weather">
         @include('sections.weather')
     </section>
     <section class="w-100 routes shadow inset-shadow" id="routes">

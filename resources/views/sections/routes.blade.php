@@ -5,11 +5,11 @@
             <select class="form-select form-select-sm " name="routeSelector" id="routeSelector"
                 aria-label="Default select example">
                 <option selected>Select Location</option>
-                <option value="1">Daet</option>
-                <option value="2">Iriga</option>
-                <option value="3">Lagonoy</option>
-                <option value="4">Legazpi</option>
-                <option value="5">Polangui</option>
+                <option value="Daet">Daet</option>
+                <option value="Iriga">Iriga</option>
+                <option value="Lagonoy">Lagonoy</option>
+                <option value="Legaspi">Legaspi</option>
+                <option value="Polangui">Polangui</option>
             </select>
         </div>
         <table class="col-12 table text-white fw-medium">
