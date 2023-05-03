@@ -22,9 +22,20 @@
                 <th scope="col">Driver</th>
             </thead>
             <tbody>
+                @foreach ($data as $row)
+                    <tr>
+                        <td>{{ $row->bus_data->bus_number ?? 'N/A' }}</td>
+                        <td>{{ $row->departure_time }}</td>
+                        <td>{{ $row->arrival_time }}</td>
+                        <td>{{ $row->bus_model }}</td>
+                        <td>{{ $bus_trip->bus_drivers->driver_name ?? 'N/A' }}</td>
+                        <td>{{ $bus_trip->bus_drivers->driver_name ?? 'N/A' }}</td>
+                    </tr>
+                @endforeach
+                
                 <tr>
                     <th scope="row">1</th>
-                    <td>7:00</td>
+                    <td> eh </td>   
                     <td>8:30</td>
                     <td>Jian Are you reading this?</td>
                     <td>69km</td>

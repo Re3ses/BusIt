@@ -13,7 +13,9 @@ class BusTripsController extends Controller
      */
     public function index()
     {
-        //
+        //$data = Bus_Trips::all();
+        $data = Bus_Trips::with(['bus_data', 'bus_drivers'])->get();
+        return view('sections.routes', compact('data'));
     }
 
     /**

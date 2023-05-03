@@ -22,9 +22,9 @@ class Bus_TripsFactory extends Factory
     public function definition(): array
     {
         return [
-            'bus_id'=> Bus_Data::factory(),
-            'driver_id'=> Bus_Drivers::factory(),
-            'user_id'=> User::factory(),
+            'bus_id' => $this->faker->randomElement(Bus_Data::pluck('id')),
+            'driver_id' => $this->faker->randomElement(Bus_Drivers::pluck('id')),
+            'user_id' => $this->faker->randomElement(User::pluck('id')),
             'departure_time'=> $this->faker->time(),
             'arrival_time' => $this->faker->time(),
             'route_fare' => $this->faker->numberBetween($min = 10, $max = 500),
