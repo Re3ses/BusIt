@@ -34,6 +34,15 @@ class WeatherController extends Controller
         $rain = isset($responseData['rain']['1h']) ? $responseData['rain']['1h'] : "n/a";
 
 
-        return (compact('location', 'description', 'iconUrl', 'temperature', 'humidity', 'rain'));
+        return (
+            compact(
+                'location', 
+                'description', 
+                'iconUrl', 
+                'temperature', 
+                'humidity', 
+                'rain'
+            )
+        );
     }
 }

@@ -1,14 +1,4 @@
-<div class="container-fluid flex-column p-5 h-100 w-100">
-    {{-- <svg width="100%" height="100%">
-        <defs>
-            <pattern id="cloud" width="100" height="100" patternUnits="userSpaceOnUse">
-              <img src="images/cloud.svg" width="100%" height="100%" alt="tetst">
-          </pattern>
-        </defs>
-        <rect x="0" y="0" width="100%" height="100%" fill="url(#cloud)"></rect>
-      </svg>
-      
-       --}}
+<div class="container-fluid flex-column px-5 py-3 h-100 w-100">
     <div class="row px-3">
         <h1 class="fs-1 col-1 me-5">Weather</h1>
         <div class="col-2 d-flex align-items-center justify-content-center">
@@ -18,6 +8,7 @@
                 <option value="Iriga City">Iriga</option>
                 <option value="Lagonoy">Lagonoy</option>
                 <option value="Legaspi">Legaspi</option>
+                <option value="Naga">Naga</option>
                 <option value="Polangui">Polangui</option>
             </select>
         </div>

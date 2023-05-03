@@ -1,4 +1,4 @@
-<div class="container-fluid p-5 h-100 text-white">
+<div class="container-fluid px-5 py-3 h-100 text-white">
     <div class="row px-3"><h1 class="fs-1">Routes</h1></div>
     <div class="row table-bg rounded flex-column">
         <div class="col-2 py-3">
@@ -33,27 +33,6 @@
                     <td>Kono Dio Ga!!!</td>
                 </tr>
             </tbody>
-
-            {{-- SAMPLE CODE FOR TABLE --}}
-            {{-- <table id="table-data">
-                <thead>
-                    <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
-                        <th>Column 3</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($data as $row)
-                        <tr>
-                            <td>{{ $row->column1 }}</td>
-                            <td>{{ $row->column2 }}</td>
-                            <td>{{ $row->column3 }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table> --}}
-
         </table>
     </div>
 </div>
