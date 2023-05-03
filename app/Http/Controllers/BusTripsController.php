@@ -11,7 +11,7 @@ class BusTripsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function getTrips()
     {
         //$data = Bus_Trips::all();
         $data = Bus_Trips::with(['bus_data', 'bus_drivers'])->get();
