@@ -1,14 +1,15 @@
-<div class="container-fluid p-5 h-100">
-    <div class="row table-bg rounded h-100 flex-column">
+<div class="container-fluid px-5 py-3 h-100 text-white">
+    <div class="row px-3"><h1 class="fs-1">Routes</h1></div>
+    <div class="row table-bg rounded flex-column">
         <div class="col-2 py-3">
             <select class="form-select form-select-sm " name="routeSelector" id="routeSelector"
                 aria-label="Default select example">
                 <option selected>Select Location</option>
-                <option value="1">Daet</option>
-                <option value="2">Iriga</option>
-                <option value="3">Lagonoy</option>
-                <option value="4">Legazpi</option>
-                <option value="5">Polangui</option>
+                <option value="Daet">Daet</option>
+                <option value="Iriga">Iriga</option>
+                <option value="Lagonoy">Lagonoy</option>
+                <option value="Legaspi">Legaspi</option>
+                <option value="Polangui">Polangui</option>
             </select>
         </div>
         <table class="col-12 table text-white fw-medium">
@@ -43,27 +44,6 @@
                     <td>Kono Dio Ga!!!</td>
                 </tr>
             </tbody>
-
-            {{-- SAMPLE CODE FOR TABLE --}}
-            {{-- <table id="table-data">
-                <thead>
-                    <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
-                        <th>Column 3</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($data as $row)
-                        <tr>
-                            <td>{{ $row->column1 }}</td>
-                            <td>{{ $row->column2 }}</td>
-                            <td>{{ $row->column3 }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table> --}}
-
         </table>
     </div>
 </div>

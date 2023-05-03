@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'BusIt') }}</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
@@ -23,6 +23,15 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
+    {{--
+        TODO
+        - Add weather capabilities
+            - Use openWeather api
+        - Add map capabilties
+            - Use map api
+        - Add about page
+            - Design about page
+     --}}
     <div id="app">
         <main>
             <div class="sidebar">

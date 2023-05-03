@@ -8,10 +8,10 @@
                 <a class="fa-solid fa-house" href="#landing"><span class="sidebar-txt">Home</span></a>
             </li>
             <li class="sidebar-button">
-                <a class="fa-solid fa-bus" href="#routes"><span class="sidebar-txt">Routes</span></a>
+                <a class="fa-solid fa-cloud" href="#weather"><span class="sidebar-txt">Weather</span></a>
             </li>
             <li class="sidebar-button">
-                <a class="fa-solid fa-cloud" href="#weather"><span class="sidebar-txt">Weather</span></a>
+                <a class="fa-solid fa-bus" href="#routes"><span class="sidebar-txt">Routes</span></a>
             </li>
             <li class="sidebar-button">
                 <a class="fa-solid fa-newspaper" href="#news"><span class="sidebar-txt">News</span></a>
