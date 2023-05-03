@@ -13,56 +13,60 @@ class BusTripsController extends Controller
      */
     public function getTrips()
     {
-        //$data = Bus_Trips::all();
-        $data = Bus_Trips::with(['bus_data', 'bus_drivers'])->get();
-        return view('sections.routes', compact('data'));
+        $data = "test";
+        // $data = Bus_Trips::all();
+        //$data = Bus_Trips::with(['bus_data', 'bus_drivers'])->get();
+        // $data = json_decode(Bus_Trips::all());
+        // $propertyValue = $data[0]->id;
+
+        return ($data);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
-    {
-        //
-    }
+    // public function create()
+    // {
+    //     //
+    // }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreBus_TripsRequest $request)
-    {
-        //
-    }
+    // /**
+    //  * Store a newly created resource in storage.
+    //  */
+    // public function store(StoreBus_TripsRequest $request)
+    // {
+    //     //
+    // }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Bus_Trips $bus_Trips)
-    {
-        //
-    }
+    // /**
+    //  * Display the specified resource.
+    //  */
+    // public function show(Bus_Trips $bus_Trips)
+    // {
+    //     //
+    // }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Bus_Trips $bus_Trips)
-    {
-        //
-    }
+    // /**
+    //  * Show the form for editing the specified resource.
+    //  */
+    // public function edit(Bus_Trips $bus_Trips)
+    // {
+    //     //
+    // }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateBus_TripsRequest $request, Bus_Trips $bus_Trips)
-    {
-        //
-    }
+    // /**
+    //  * Update the specified resource in storage.
+    //  */
+    // public function update(UpdateBus_TripsRequest $request, Bus_Trips $bus_Trips)
+    // {
+    //     //
+    // }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Bus_Trips $bus_Trips)
-    {
-        //
-    }
+    // /**
+    //  * Remove the specified resource from storage.
+    //  */
+    // public function destroy(Bus_Trips $bus_Trips)
+    // {
+    //     //
+    // }
 }

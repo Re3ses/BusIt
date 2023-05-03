@@ -12,7 +12,7 @@
                 <option value="Polangui">Polangui</option>
             </select>
         </div>
-        <table class="col-12 table text-white fw-medium">
+        {{-- <table class="col-12 table text-white fw-medium">
             <thead>
                 <th scope="col">Bus No.</th>
                 <th scope="col">Departure Time</th>
@@ -33,17 +33,8 @@
                         <td>{{ $bus_trip->bus_drivers->driver_name ?? 'N/A' }}</td>
                     </tr>
                 @endforeach
-                
-                <tr>
-                    <th scope="row">1</th>
-                    <td> eh </td>   
-                    <td>8:30</td>
-                    <td>Jian Are you reading this?</td>
-                    <td>69km</td>
-                    <td>420</td>
-                    <td>Kono Dio Ga!!!</td>
-                </tr>
             </tbody>
-        </table>
+        </table> --}}
+        <p>{{  $tripsData }}</p>
     </div>
 </div>
