@@ -119,9 +119,14 @@ div, section {
     height: 90%;
 }
 
+.table-body {
+    height: 80%;
+}
+
 .weather {
     /* background-image: url("/images/pexels-pixabay-158827.jpg"); */
     background-color: rgb(253, 253, 255);
     background-size: cover;
     height: 25vh;
 }
+

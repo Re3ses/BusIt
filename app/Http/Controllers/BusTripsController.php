@@ -13,8 +13,7 @@ class BusTripsController extends Controller
      */
     public function getTrips()
     {
-        $data = "test";
-        // $data = Bus_Trips::all();
+        $data = Bus_Trips::all();
         //$data = Bus_Trips::with(['bus_data', 'bus_drivers'])->get();
         // $data = json_decode(Bus_Trips::all());
         // $propertyValue = $data[0]->id;
