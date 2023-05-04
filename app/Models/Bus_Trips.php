@@ -11,12 +11,15 @@ class Bus_Trips extends Model
     use HasFactory;
 
     public function Bus_Drivers(){
-        return $this->belongsTo(Bus_Drivers::class);
+        return $this->belongsTo(Bus_Drivers::class, 'driver_id', 'id');
     }
     public function Bus_Data(){
-        return $this->belongsTo(Bus_Data::class);
+        return $this->belongsTo(Bus_Data::class, 'bus_id', 'id');
+    }
+    public function Bus_Routes(){
+        return $this->belongsTo(Bus_Routes::class, 'route_id', 'id');
     }
     public function User(){
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 }

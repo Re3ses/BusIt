@@ -27,11 +27,12 @@
                     @foreach ($tripsData as $row)
                         <tr>
                             <th scope="row">{{ $row->bus_data->bus_number ?? 'N/A' }}</th>
-                            <td>{{ $row->departure_time }}</td>
-                            <td>{{ $row->arrival_time }}</td>
-                            <td>{{ $row->bus_model }}</td>
-                            <td>{{ $bus_trip->bus_drivers->driver_name ?? 'N/A' }}</td>
-                            <td>{{ $bus_trip->bus_drivers->driver_name ?? 'N/A' }}</td>
+                            <td>{{ $row->departure_time ?? 'N/A'}}</td>
+                            <td>{{ $row->arrival_time ?? 'N/A'}}</td>
+                            <td>{{ $row->bus_routes->route_distance ?? 'N/A'}}</td>
+                            <td>{{ $row->bus_routes->route_fare ?? 'N/A' }}/ km</td>
+                            <td>{{ $row->bus_drivers->driver_name ?? 'N/A' }}</td>
+                            <td>{{ $row->bus_data->bus_company ?? 'N/A' }}</td>
                         </tr>
                     @endforeach
                 </tbody>
