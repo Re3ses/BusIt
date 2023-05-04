@@ -17,11 +17,11 @@ class HomeController extends Controller
          * Home view and an array containing data from various controllers.
         */
 
-        // Asssign return statement of controllers to variables
-        $busData = (new BusTripsController)->getWeather('Naga'); // Assign the returned array from getWeather() function to variable
-        $weatherData = (new weatherController)->getTrips(); // Assign the returned table from getTrips() function to variable
+        $busTrips = new BusTripsController;
+        $weatherInfo = new weatherController;
+        $weatherData = $weatherInfo->getWeather('Naga'); // Assign the returned array from getWeather() function to variable
+        $tripsData = $busTrips->getTrips(); // Assign the returned table from getTrips() function to var
 
-        // return home view and an array containing data from controllers.
         return view(
             'home',
             compact('weatherData', 'tripsData'),
