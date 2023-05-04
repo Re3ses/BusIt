@@ -34,6 +34,9 @@
 
 
 <script>
+    /*
+    *   Script for expanding and collpasing sidebar
+    */
     let sidebar = document.getElementById("sidebar");
     let hiddenElements = document.querySelectorAll(".sidebar-txt");
     let sidebarButtons = document.querySelectorAll(".sidebar-button");
@@ -64,7 +67,7 @@
 
     function animate(toExpand) {
         if (toExpand === true) {
-            width++;
+            width += 2;
             sidebar.style.width = width + "vw";
             if (width < 13) {
                 requestAnimationFrame(() => animate(toExpand));
@@ -77,4 +80,12 @@
             }
         }
     }
+
+    // document.addEventListener('click', function(event) {
+    //     // If the click is outside of the sidebar and the sidebar is expanded
+    //     if (!sidebar.contains(event.target) && !hidden) {
+    //         // Collapse the sidebar
+    //         expand();
+    //     }
+    // });
 </script>

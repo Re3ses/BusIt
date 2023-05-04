@@ -1,4 +1,5 @@
 <div class="container-fluid flex-column px-5 py-3 h-100 w-100">
+    {{-- Weather title and select tag --}}
     <div class="row px-3">
         <h1 class="fs-1 col-1 me-5">Weather</h1>
         <div class="col-2 d-flex align-items-center justify-content-center">
@@ -14,6 +15,7 @@
         </div>
         <hr>
     </div>
+    {{-- Weather display --}}
     <div class="row px-5 d-flex align-items-center justify-content-center">
         <div class="col-3 weather-main d-flex align-items-center justify-content-center">
             <img src={{ $weatherData['iconUrl'] }} alt="Weather Icon" id="weather-icon"></img>
@@ -32,25 +34,25 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    $weatherData['('#citySelector').on('change', function() {
+    $('#citySelector').on('change', function() {
         // console.log('City selected:', $weatherData['(this).val());
         // console.log('CSRF token:', $weatherData['('meta[name="csrf-token"]').attr('content'));
-        var selectedCity = $weatherData['(this).val();
-        $weatherData['.ajax({
+        var selectedCity = $(this).val();
+        $.ajax({
             type: 'PUT',
             headers: {
-                'X-CSRF-TOKEN': $weatherData['('meta[name="csrf-token"]').attr('content')
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             url: '/weather/' + selectedCity,
             success: function(response) {
                 // handle the response from the server here
-                console.log(response); // log the response to the console
-                $weatherData['('#weather-icon').attr('src', response.iconUrl); // update the page content with the icon URL data
-                $weatherData['('#weather-location').html(response.location); // update the page content with the location data
-                $weatherData['('#weather-description').html(response.description); // update the page content with the description data
-                $weatherData['('#weather-temperature').html(response.temperature + " ℃"); // update the page content with the temperature 
-                $weatherData['('#weather-humidity').html(response.humidity + " %"); // update the page content with the humidity
-                $weatherData['('#weather-rain').html(response.rain + " mm"); // update the page content with the rain
+                // console.log(response); // log the response to the console
+                $('#weather-icon').attr('src', response.iconUrl); // update the page content with the icon URL data
+                $('#weather-location').html(response.location); // update the page content with the location data
+                $('#weather-description').html(response.description); // update the page content with the description data
+                $('#weather-temperature').html(response.temperature + " ℃"); // update the page content with the temperature 
+                $('#weather-humidity').html(response.humidity + " %"); // update the page content with the humidity
+                $('#weather-rain').html(response.rain + " mm"); // update the page content with the rain
             }
         })
     })
