@@ -1,4 +1,5 @@
 <div class="container-fluid flex-column px-5 py-3 h-100 w-100">
+    {{-- Weather title and select tag --}}
     <div class="row px-3">
         <h1 class="fs-1 col-1 me-5">Weather</h1>
         <div class="col-2 d-flex align-items-center justify-content-center">
@@ -14,6 +15,7 @@
         </div>
         <hr>
     </div>
+    {{-- Weather display --}}
     <div class="row px-5 d-flex align-items-center justify-content-center">
         <div class="col-3 weather-main d-flex align-items-center justify-content-center">
             <img src={{ $weatherData['iconUrl'] }} alt="Weather Icon" id="weather-icon"></img>

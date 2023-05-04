@@ -23,15 +23,6 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
-    {{--
-        TODO
-        - Add weather capabilities
-            - Use openWeather api
-        - Add map capabilties
-            - Use map api
-        - Add about page
-            - Design about page
-     --}}
     <div id="app">
         <main>
             <div class="sidebar">

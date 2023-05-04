@@ -34,6 +34,9 @@
 
 
 <script>
+    /*
+    *   Script for expanding and collpasing sidebar
+    */
     let sidebar = document.getElementById("sidebar");
     let hiddenElements = document.querySelectorAll(".sidebar-txt");
     let sidebarButtons = document.querySelectorAll(".sidebar-button");
