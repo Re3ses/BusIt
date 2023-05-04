@@ -13,7 +13,7 @@
             </select>
         </div>
         <div class="table-responsive table-body">
-            <table class="col-12 table table-hover table-sm text-white fw-medium">
+            <table class="col-12 table table-dark table-hover table-striped table-sm text-white fw-medium">
                 <thead>
                     <th scope="col">Bus No.</th>
                     <th scope="col">Departure Time</th>
