@@ -71,7 +71,7 @@ function expand() {
 
 function animate(toExpand) {
   if (toExpand === true) {
-    width += 10;
+    width += 20;
     sidebar.style.width = width + "%";
     if (width < 433) {
       requestAnimationFrame(() => animate(toExpand));
@@ -79,7 +79,7 @@ function animate(toExpand) {
       animating = false;
     }
   } else {
-    width -= 10;
+    width -= 20;
     if (width >= 100) {
       sidebar.style.width = width + "%";
       requestAnimationFrame(() => animate(toExpand));
