@@ -35,57 +35,65 @@
 
 <script>
     /*
-     *   Script for expanding and collpasing sidebar
-     */
-    let sidebar = document.getElementById("sidebar");
-    let hiddenElements = document.querySelectorAll(".sidebar-txt");
-    let sidebarButtons = document.querySelectorAll(".sidebar-button");
-    let width = 100;
-    let hidden = true;
+ *   Script for expanding and collapsing sidebar
+ */
+let sidebar = document.getElementById("sidebar");
+let hiddenElements = document.querySelectorAll(".sidebar-txt");
+let sidebarButtons = document.querySelectorAll(".sidebar-button");
+let width = 100;
+let hidden = true;
+let animating = false;
 
-    function expand() {
-        animate(hidden);
+function expand() {
+  if (!animating) {
+    animating = true;
+    animate(hidden);
 
-        hiddenElements.forEach(element => {
-            if (hidden) {
-                element.style.display = 'inline';
-            } else {
-                element.style.display = 'none';
-            }
-        });
+    hiddenElements.forEach(element => {
+      if (hidden) {
+        element.style.display = 'inline';
+      } else {
+        element.style.display = 'none';
+      }
+    });
 
-        sidebarButtons.forEach(button => {
-            if (hidden) {
-                button.style.width = width + "%";
-            } else {
-                button.style.width = 433 + "%";
-            }
-        });
+    sidebarButtons.forEach(button => {
+      if (hidden) {
+        button.style.width = width + "%";
+      } else {
+        button.style.width = 433 + "%";
+      }
+    });
 
-        hidden = !hidden;
+    hidden = !hidden;
+  }
+}
+
+function animate(toExpand) {
+  if (toExpand === true) {
+    width += 10;
+    sidebar.style.width = width + "%";
+    if (width < 433) {
+      requestAnimationFrame(() => animate(toExpand));
+    } else {
+      animating = false;
     }
-
-    function animate(toExpand) {
-        if (toExpand === true) {
-            width += 10;
-            sidebar.style.width = width + "%";
-            if (width < 433) {
-                requestAnimationFrame(() => animate(toExpand));
-            }
-        } else {
-            width -= 10;
-            if (width >= 100) {
-                sidebar.style.width = width + "%";
-                requestAnimationFrame(() => animate(toExpand));
-            }
-        }
+  } else {
+    width -= 10;
+    if (width >= 100) {
+      sidebar.style.width = width + "%";
+      requestAnimationFrame(() => animate(toExpand));
+    } else {
+      animating = false;
     }
+  }
+}
 
-    // document.addEventListener('click', function(event) {
-    //     // If the click is outside of the sidebar and the sidebar is expanded
-    //     if (!sidebar.contains(event.target) && !hidden) {
-    //         // Collapse the sidebar
-    //         expand();
-    //     }
-    // });
+// document.addEventListener('click', function(event) {
+//     // If the click is outside of the sidebar and the sidebar is expanded
+//     if (!sidebar.contains(event.target) && !hidden) {
+//         // Collapse the sidebar
+//         expand();
+//     }
+// });
 </script>
