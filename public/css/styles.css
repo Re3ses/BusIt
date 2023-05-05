@@ -99,16 +99,22 @@ div, section {
 }
 
 .landing-bar {
-    margin-left: 2vw;
-    height: 5vh;
-    background-color: white;
+    margin-left: 3%;
+    width: 97%;
+    height: 6%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), #00000000);
     position: absolute;
     top: 0;
     left: 0;
 }
 
+.landing-bar a {
+    text-decoration: none; 
+    color: #cfdae9; 
+}
+
 .busit-logo {
-    height: 64px;
+    height: 3rem;
     width: auto;
 }
 
