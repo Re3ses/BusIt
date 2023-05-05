@@ -3,7 +3,7 @@
     <div class="row px-3">
         <h1 class="fs-1 col-1 me-5">Routes</h1>
         <div class="col-2 py-3 d-flex align-items-center justify-content-center">
-            <select class="form-select form-select-sm " name="routeSelector" id="routeSelector"
+            <select class="form-select form-select-sm " name="routeSelector" id="routeSelector" 
                 aria-label="Default select example">
                 <option selected>Select Location</option>
                 <option value="Daet">Daet</option>
@@ -13,6 +13,7 @@
                 <option value="Polangui">Polangui</option>
             </select>
         </div>
+       
     </div>
     <div class="row table-bg rounded flex-row py-3">
         {{-- Trips display table --}}
@@ -45,3 +46,27 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        // Listen for changes to the select element
+        $('#routeSelector').on('change', function() {
+            // Get the selected option value
+            var selectedOption = $(this).val();
+
+            // Make an AJAX request to get the updated table data
+            $.ajax({
+                url: 'get-table-data.php', // Replace with the URL to your PHP script
+                type: 'POST',
+                data: { route: selectedOption },
+                success: function(response) {
+                    // Update the table with the new data
+                    $('#table-wrapper').html(response);
+                },
+                error: function(xhr, status, error) {
+                    console.log(xhr.responseText);
+                }
+            });
+        });
+    });
+</script>

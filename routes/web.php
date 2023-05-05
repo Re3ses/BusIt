@@ -18,6 +18,4 @@ Route::put('/routes', [App\Http\Controllers\BusTripsController::class, 'getTrips
 Route::put('/weather/{whichCity}', [\App\Http\Controllers\WeatherController::class, 'getWeather']);
 Route::get('/edit-tables', [\App\Http\Controllers\EditTablesController::class, 'index'])->name('tables');
 
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
