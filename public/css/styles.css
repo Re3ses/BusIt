@@ -19,7 +19,7 @@ div, section {
 .sidebar {
     z-index: 999;
     height: 100vh;
-    width: 4vw;
+    width: 3%;
     position: fixed;
     top: 0;
     left: 0;
@@ -33,7 +33,7 @@ div, section {
     position: absolute;
     top: 0;
     left: 0;
-    width: 4vw;
+    width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     text-decoration: none;
@@ -59,14 +59,14 @@ div, section {
 }
 
 .sidebar-btns li {
-    width: 4vw;
+    width: 3%;
     display: flex;
     justify-content: center;
     margin: 15px 0;
-    font-size: 1.5rem;
 }
 
 .sidebar a {
+    font-size: 1rem;
     color: white;
     text-decoration: none;
 }
@@ -85,7 +85,7 @@ div, section {
 }
 
 .content section {
-    padding-left: 4vw;
+    padding-left: 3%;
 }
 
 .inset-shadow {
@@ -98,6 +98,15 @@ div, section {
     z-index: 1;
 }
 
+.landing-bar {
+    margin-left: 2vw;
+    height: 5vh;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .busit-logo {
     height: 64px;
     width: auto;
@@ -106,6 +115,11 @@ div, section {
 .weather-icon {
     font-size: 3rem;
     margin: auto;
+}
+
+.register-link {
+    color: white;
+    text-decoration: none;
 }
 
 .routes { 

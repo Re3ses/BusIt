@@ -23,11 +23,11 @@
                 <a class="fa-solid fa-circle-info" href="#about"><span class="sidebar-txt">About</span></a>
             </li>
         </ol>
-        <a href="#" class="pb-4">
-            <button type="button" class="bg-transparent">
+        <div class="d-flex flex-column py-4">
+            <a href="#">
                 <i class="fa-solid fa-gear"><span class="sidebar-txt">Settings</span></i>
-            </button>
-        </a>
+            </a>
+        </div>
     </div>
 
 </div>
@@ -35,12 +35,12 @@
 
 <script>
     /*
-    *   Script for expanding and collpasing sidebar
-    */
+     *   Script for expanding and collpasing sidebar
+     */
     let sidebar = document.getElementById("sidebar");
     let hiddenElements = document.querySelectorAll(".sidebar-txt");
     let sidebarButtons = document.querySelectorAll(".sidebar-button");
-    let width = 4;
+    let width = 100;
     let hidden = true;
 
     function expand() {
@@ -56,9 +56,9 @@
 
         sidebarButtons.forEach(button => {
             if (hidden) {
-                button.style.width = width + "vw";
+                button.style.width = width + "%";
             } else {
-                button.style.width = 13 + "vw";
+                button.style.width = 433 + "%";
             }
         });
 
@@ -67,15 +67,15 @@
 
     function animate(toExpand) {
         if (toExpand === true) {
-            width += 2;
-            sidebar.style.width = width + "vw";
-            if (width < 13) {
+            width += 10;
+            sidebar.style.width = width + "%";
+            if (width < 433) {
                 requestAnimationFrame(() => animate(toExpand));
             }
         } else {
-            width--;
-            if (width >= 4) {
-                sidebar.style.width = width + "vw";
+            width -= 10;
+            if (width >= 100) {
+                sidebar.style.width = width + "%";
                 requestAnimationFrame(() => animate(toExpand));
             }
         }
