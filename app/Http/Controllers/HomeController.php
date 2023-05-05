@@ -11,13 +11,16 @@ class HomeController extends Controller
 {
     public function index()
     {
+        /* index(): Control the display of the home page
+         * Arguments: None
+         * Return:
+         * Home view and an array containing data from various controllers.
+        */
+
         $busTrips = new BusTripsController;
         $weatherInfo = new weatherController;
-        $weatherData = $weatherInfo->getWeather('Naga');
-        $tripsData = $busTrips->getTrips();
-
-        // Debugging code - remove this once you've identified the issue
-        // var_dump($weatherData, $tripsData);
+        $weatherData = $weatherInfo->getWeather('Naga'); // Assign the returned array from getWeather() function to variable
+        $tripsData = $busTrips->getTrips(); // Assign the returned table from getTrips() function to var
 
         return view(
             'home',

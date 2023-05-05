@@ -1,5 +1,5 @@
 <div class="container-fluid h-100 d-flex flex-column justify-content-between">
-    <div class="row px-5 pt-5">
+    {{-- <div class="row px-5 pt-5">
         <div class="col-10">
             <a href="#">
                 <img class="busit-logo" src="/images/busit-logo.png" alt="busit-logo">
@@ -18,14 +18,23 @@
         <div class="row p-5">
             <button class="col-1 btn btn-warning px-3 text-white fw-medium" onclick="location.href='#about'">About
                 Us</button>
+
         </div>
         <div class="row">
-            <div class="col align-self-start"></div>
+            <a href="" class="col align-self-start pb-4 fs-3 register-link">Become an admin</a>
             <p class="col-1 align-self-end text-white fs-3 fw-bold" id="clock">00:00</p>
+        </div>
+    </div> --}}
+    <div class="landing-bar d-flex flex-wrap align-items-center justify-content-between">
+        <a href="#" class="px-4">
+            <img class="busit-logo" src="/images/busit-logo.png" alt="busit-logo">
+        </a>
+        <div class="d-flex align-content-center px-4 h-75" >
+            <div class="vr mx-3"></div>
+            <a href="/login" class="fs-5 fw-semibold h-0">MANAGE</a>
         </div>
     </div>
 </div>
-
 
 <script>
     function updateTime() {

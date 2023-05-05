@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::put('/routes', [App\Http\Controllers\BusTripsController::class, 'getTrips']);
 Route::put('/weather/{whichCity}', [\App\Http\Controllers\WeatherController::class, 'getWeather']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

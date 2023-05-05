@@ -23,19 +23,10 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
-    {{--
-        TODO
-        - Add weather capabilities
-            - Use openWeather api
-        - Add map capabilties
-            - Use map api
-        - Add about page
-            - Design about page
-     --}}
     <div id="app">
         <main>
             <div class="sidebar">
-                @include('sidebar')
+                @include('components.sidebar')
             </div>
             <div class="content d-flex flex-column justify-content-center align-items-center w-100">
                 @yield('content')
