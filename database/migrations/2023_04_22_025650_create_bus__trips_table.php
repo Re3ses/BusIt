@@ -17,10 +17,9 @@ return new class extends Migration
             $table->unsignedBigInteger('bus_id');
             $table->unsignedBigInteger('driver_id');
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('route_id');
             $table->time('departure_time');
             $table->time('arrival_time');
-            $table->smallInteger('route_fare');
-            $table->string('route_destination');
 
             $table->foreign('bus_id')
               ->references('id')->on('bus__data')->onUpdate('cascade')->onDelete('cascade');
@@ -28,6 +27,8 @@ return new class extends Migration
               ->references('id')->on('bus__drivers')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('user_id')
               ->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('route_id')
+              ->references('id')->on('bus__routes')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

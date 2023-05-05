@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Models\Bus_Trips;
 use App\Models\Bus_Drivers;
 use App\Models\Bus_Data;
+use App\Models\Bus_Routes;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -25,10 +26,9 @@ class Bus_TripsFactory extends Factory
             'bus_id' => $this->faker->randomElement(Bus_Data::pluck('id')),
             'driver_id' => $this->faker->randomElement(Bus_Drivers::pluck('id')),
             'user_id' => $this->faker->randomElement(User::pluck('id')),
+            'route_id' => $this->faker->randomElement(Bus_Routes::pluck('id')),
             'departure_time'=> $this->faker->time(),
             'arrival_time' => $this->faker->time(),
-            'route_fare' => $this->faker->numberBetween($min = 10, $max = 500),
-            'route_destination' => $this->faker->city()
         ];
     }
 }
