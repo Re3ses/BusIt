@@ -3,17 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Bus_Trips;
 
 class editTablesController extends Controller
 {
     public function index()
     {
-        $data = [
-            'title' => 'About Us',
-            'description' => 'We are a company that provides high-quality services.',
-        ];
+        $tripsData = Bus_Trips::with(['bus_data', 'bus_drivers', 'bus_routes'])->get();
 
-        return view('pages.edit-tables', $data);
+        return view('pages.edit-tables', compact('tripsData'));
     }
 
 }
