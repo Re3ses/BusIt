@@ -26,7 +26,7 @@
     <div id="app">
         <main>
             <div class="sidebar">
-                @include('sidebar')
+                @include('components.sidebar')
             </div>
             <div class="content d-flex flex-column justify-content-center align-items-center w-100">
                 @yield('content')

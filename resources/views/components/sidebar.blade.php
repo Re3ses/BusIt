@@ -23,11 +23,11 @@
                 <a class="fa-solid fa-circle-info" href="#about"><span class="sidebar-txt">About</span></a>
             </li>
         </ol>
-        <a href="#" class="pb-4">
-            <button type="button" class="bg-transparent">
+        <div class="d-flex flex-column py-4">
+            <a href="#">
                 <i class="fa-solid fa-gear"><span class="sidebar-txt">Settings</span></i>
-            </button>
-        </a>
+            </a>
+        </div>
     </div>
 
 </div>
@@ -35,57 +35,65 @@
 
 <script>
     /*
-    *   Script for expanding and collpasing sidebar
-    */
+     *   Script for expanding and collapsing sidebar
+     */
     let sidebar = document.getElementById("sidebar");
     let hiddenElements = document.querySelectorAll(".sidebar-txt");
     let sidebarButtons = document.querySelectorAll(".sidebar-button");
-    let width = 4;
+    let width = 100;
     let hidden = true;
+    let animating = false;
 
     function expand() {
-        animate(hidden);
+        if (!animating) {
+            animating = true;
+            animate(hidden);
 
-        hiddenElements.forEach(element => {
-            if (hidden) {
-                element.style.display = 'inline';
-            } else {
-                element.style.display = 'none';
-            }
-        });
+            hiddenElements.forEach(element => {
+                if (hidden) {
+                    element.style.display = 'inline';
+                } else {
+                    element.style.display = 'none';
+                }
+            });
 
-        sidebarButtons.forEach(button => {
-            if (hidden) {
-                button.style.width = width + "vw";
-            } else {
-                button.style.width = 13 + "vw";
-            }
-        });
+            sidebarButtons.forEach(button => {
+                if (hidden) {
+                    button.style.width = width + "%";
+                } else {
+                    button.style.width = 433 + "%";
+                }
+            });
 
-        hidden = !hidden;
+            hidden = !hidden;
+        }
     }
 
     function animate(toExpand) {
         if (toExpand === true) {
-            width += 2;
-            sidebar.style.width = width + "vw";
-            if (width < 13) {
+            width += 10;
+            sidebar.style.width = width + "%";
+            if (width < 433) {
                 requestAnimationFrame(() => animate(toExpand));
+            } else {
+                animating = false;
             }
         } else {
-            width--;
-            if (width >= 4) {
-                sidebar.style.width = width + "vw";
+            width -= 10;
+            if (width >= 100) {
+                sidebar.style.width = width + "%";
                 requestAnimationFrame(() => animate(toExpand));
+            } else {
+                animating = false;
             }
         }
     }
 
-    // document.addEventListener('click', function(event) {
-    //     // If the click is outside of the sidebar and the sidebar is expanded
-    //     if (!sidebar.contains(event.target) && !hidden) {
-    //         // Collapse the sidebar
-    //         expand();
-    //     }
-    // });
+    document.addEventListener('click', function(event) {
+        // If the click is outside of the sidebar and the sidebar is expanded
+        if (!sidebar.contains(event.target) && !hidden) {
+            // Collapse the sidebar
+            expand();
+        }
+    });
 </script>
