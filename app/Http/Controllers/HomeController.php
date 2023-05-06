@@ -20,7 +20,7 @@ class HomeController extends Controller
         $busTrips = new BusTripsController;
         $weatherInfo = new weatherController;
         $weatherData = $weatherInfo->getWeather('Naga'); // Assign the returned array from getWeather() function to variable
-        $tripsData = $busTrips->getTrips(); // Assign the returned table from getTrips() function to var
+        $tripsData = $busTrips->getTrips('Daet'); // Assign the returned table from getTrips() function to var
 
         return view(
             'home',

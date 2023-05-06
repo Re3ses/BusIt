@@ -18,7 +18,7 @@
     <div class="row table-bg rounded flex-row py-3">
         {{-- Trips display table --}}
         <div class="table-responsive table-body">
-            <table class="col-12 table table-dark table-hover table-striped table-sm text-white fw-medium">
+            <table class="col-12 table table-dark table-hover table-striped table-sm text-white fw-medium" id="routeTable">
                 <thead>
                     <th scope="col">Bus No.</th>
                     <th scope="col">Departure Time</th>
@@ -35,7 +35,7 @@
                             <th scope="row">{{ $row->bus_data->bus_number ?? 'N/A' }}</th>
                             <td>{{ $row->departure_time ?? 'N/A'}}</td>
                             <td>{{ $row->arrival_time ?? 'N/A'}}</td>
-                            <td>{{ $row->bus_routes->route_distance ?? 'N/A'}}</td>
+                            <td>{{ $row->bus_routes->route_distance ?? 'N/A'}} km</td>
                             <td>{{ $row->bus_routes->route_fare ?? 'N/A' }}/ km</td>
                             <td>{{ $row->bus_drivers->driver_name ?? 'N/A' }}</td>
                             <td>{{ $row->bus_data->bus_company ?? 'N/A' }}</td>
@@ -48,25 +48,41 @@
 </div>
 
 <script>
-    $(document).ready(function() {
-        // Listen for changes to the select element
-        $('#routeSelector').on('change', function() {
-            // Get the selected option value
-            var selectedOption = $(this).val();
+    // Listen for changes to the select element
+    $('#routeSelector').on('change', function() {
+        // Get the selected option value
+        var selectedOption = $(this).val();
 
-            // Make an AJAX request to get the updated table data
-            $.ajax({
-                url: 'get-table-data.php', // Replace with the URL to your PHP script
-                type: 'POST',
-                data: { route: selectedOption },
-                success: function(response) {
-                    // Update the table with the new data
-                    $('#table-wrapper').html(response);
-                },
-                error: function(xhr, status, error) {
-                    console.log(xhr.responseText);
-                }
-            });
+        // Make an AJAX request to get the updated table data
+        $.ajax({
+            type: 'PUT',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: '/routes/' + selectedOption, // Replace with the URL to your PHP script
+            //data: { route: selectedOption },
+            success: function(response) {
+            // Update the table with the new data
+                var tableBody = $("#routeTable tbody");
+
+                tableBody.empty();
+
+                response.forEach(function(row) {
+                    var tr = $("<tr>");
+                    tr.append($("<td>").text(row.bus_data.bus_number ?? 'N/A'));
+                    tr.append($("<td>").text(row.departure_time ?? 'N/A'));
+                    tr.append($("<td>").text(row.arrival_time ?? 'N/A'));
+                    tr.append($("<td>").text((row.bus_routes.route_distance ?? 'N/A') + ' km'));
+                    tr.append($("<td>").text((row.bus_routes.route_fare ?? 'N/A') + '/ km'));
+                    tr.append($("<td>").text(row.bus_drivers.driver_name ?? 'N/A'));
+                    tr.append($("<td>").text(row.bus_data.bus_company ?? 'N/A'));
+                    tableBody.append(tr);
+                });
+            },
+
+            error: function(xhr, status, error) {
+                console.log(xhr.responseText);
+            }
         });
     });
 </script>
