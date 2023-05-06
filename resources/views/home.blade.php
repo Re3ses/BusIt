@@ -6,7 +6,7 @@
         @include('sections.landing')
     </section>
     {{-- Weather section --}}
-    <section class="w-100    weather inset-shadow" id="weather">
+    <section class="w-100 weather inset-shadow" id="weather">
         @include('sections.weather')
     </section>
     {{-- Routes section --}}

@@ -119,6 +119,9 @@ div, section {
     width: auto;
 }
 
+.weather {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), #00000000);
+}
 .weather-icon {
     font-size: 3rem;
     margin: auto;
