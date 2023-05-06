@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="col-3 d-flex flex-column align-items-center justify-content-center">
-            <p class="w-50" id="weather-temperature">Temperature: {{ $weatherData['temperature'] }} ℃</p>
+            <p class="w-50" id="weather-temperature">Temperature: {{ $weatherData['temperature'] }} °C</p>
             <p class="w-50" id="weather-humidity">Humidity: {{ $weatherData['humidity'] }} %</p>
             <p class="w-50" id="weather-rain">Rain: {{ $weatherData['rain'] }} mm</p>
         </div>

@@ -1,39 +1,42 @@
 <div class="container-fluid h-100 d-flex flex-column justify-content-between">
-    {{-- <div class="row px-5 pt-5">
-        <div class="col-10">
-            <a href="#">
-                <img class="busit-logo" src="/images/busit-logo.png" alt="busit-logo">
-            </a>
-            <p class="p-4 text-white fs-3 fw-bold">Your One Stop<br>Bus Stop,<br>Information App</p>
-        </div>
-        <div class="col-2 d-flex flex-column">
-            <div class="row align-self-center">
-                <i class="weather-icon fa-solid fa-cloud-sun-rain text-white"></i>
-            </div>
-            <p class="row align-self-center text-white fs-5 fw-medium">Cloudy with Rain</p>
-        </div>
-    </div>
-
-    <div class="row px-5 pb-1">
-        <div class="row p-5">
-            <button class="col-1 btn btn-warning px-3 text-white fw-medium" onclick="location.href='#about'">About
-                Us</button>
-
-        </div>
-        <div class="row">
-            <a href="" class="col align-self-start pb-4 fs-3 register-link">Become an admin</a>
-            <p class="col-1 align-self-end text-white fs-3 fw-bold" id="clock">00:00</p>
-        </div>
-    </div> --}}
-    <div class="landing-bar d-flex flex-wrap align-items-center justify-content-between">
-        <a href="#" class="px-4">
+    <div class="landing-bar px-4 d-flex flex-wrap align-items-center justify-content-between">
+        <a href="#" class="">
             <img class="busit-logo" src="/images/busit-logo.png" alt="busit-logo">
         </a>
-        <div class="d-flex align-content-center px-4 h-75" >
+        <div class="d-flex align-content-center justify-content-center h-75">
             <div class="vr mx-3"></div>
-            <a href="/login" class="fs-5 fw-semibold h-0">MANAGE</a>
+            <a href="/login" class="fs-5 fw-semibold d-flex align-items-center">
+                <p class="my-auto">MANAGE</p>
+            </a>
         </div>
     </div>
+
+    <div class="h-75 mt-5">
+        <div class="container-fluid h-25 text-white">
+            <div class="row p-4">
+                <div class="col-10">
+                    <p class="fs-3 fw-bold">Your One Stop<br>Bus Stop,<br>Information App</p>
+                </div>
+                <div class="col-2 d-flex flex-column align-items-end">
+                    <h1 class="text-uppercase fw-bold">{{ $weatherData['location'] }}</h1>
+                    <h2 class="text-uppercase fw-bold">{{ $weatherData['temperature'] }} °C</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="h-25">
+        <div class="row h-75">
+            <div class="row p-5 h-25">
+                <button class="col-1 btn btn-warning px-3 text-white fw-medium" onclick="location.href='#about'">About Us</button>
+            </div>
+        </div>
+        <div class="row h-25 d-flex justify-content-end">
+            <div class="col-1">
+                <p class="col-1 align-self-end text-white fs-3 fw-bold" id="clock">00:00</p>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <script>
