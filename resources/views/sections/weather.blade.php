@@ -27,7 +27,7 @@
         <div class="col-3 d-flex flex-column align-items-center justify-content-center">
             <p class="w-50" id="weather-temperature">{{ $weatherData['temperature'] }} °C</p>
             <p class="w-50" id="weather-humidity">{{ $weatherData['humidity'] }} %</p>
-            <p class="w-50" id="weather-rain">{{ $weatherData['rain'] }} mm</p>
+            <p class="w-50" id="weather-rain">{{ $weatherData['rain'] }} @if($weatherData['rain'] != "n/a")mm @endif</p>
         </div>
     </div>
 </div>
@@ -52,7 +52,7 @@
                 $('#weather-description').html(response.description); // update the page content with the description data
                 $('#weather-temperature').html(response.temperature + " ℃"); // update the page content with the temperature 
                 $('#weather-humidity').html(response.humidity + " %"); // update the page content with the humidity
-                $('#weather-rain').html(response.rain + " mm"); // update the page content with the rain
+                $('#weather-rain').html(response.rain + response.rain == "n/a" ? "mm" : "n/a"); // update the page content with the rain
             }
         })
     })
