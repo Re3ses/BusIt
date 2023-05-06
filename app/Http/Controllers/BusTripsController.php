@@ -11,12 +11,15 @@ class BusTripsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function getTrips()
+    public function getTrips($whichRoute)
     {
-        //$data = Bus_Trips::all();
-        $tripsData = Bus_Trips::with(['bus_data', 'bus_drivers', 'bus_routes'])->get();
-        // $data = json_decode(Bus_Trips::all());
-        // $propertyValue = $data[0]->id;
+        $city = $whichRoute ? $whichRoute : 'Daet'; // defaults to Iriga city if the argument is empty.
+
+        //$tripsData = Bus_Trips::with(['bus_data', 'bus_drivers', 'bus_routes'])->get();
+        $tripsData = Bus_Trips::with(['bus_data', 'bus_drivers', 'bus_routes'])
+            ->whereHas('bus_routes', function ($query) use ($city) {
+            $query->where('route_destination', $city);
+        })->get();
 
         return ($tripsData);
     }
