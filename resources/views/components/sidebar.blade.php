@@ -61,7 +61,7 @@
                 if (hidden) {
                     button.style.width = width + "%";
                 } else {
-                    button.style.width = 433 + "%";
+                    button.style.width = 400 + "%";
                 }
             });
 
@@ -71,15 +71,15 @@
 
     function animate(toExpand) {
         if (toExpand === true) {
-            width += 10;
+            width += 50;
             sidebar.style.width = width + "%";
-            if (width < 433) {
+            if (width < 400) {
                 requestAnimationFrame(() => animate(toExpand));
             } else {
                 animating = false;
             }
         } else {
-            width -= 10;
+            width -= 50;
             if (width >= 100) {
                 sidebar.style.width = width + "%";
                 requestAnimationFrame(() => animate(toExpand));
