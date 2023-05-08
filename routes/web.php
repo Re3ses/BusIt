@@ -23,3 +23,9 @@ Route::patch('/edit-tables/update/{id}', [App\Http\Controllers\ProductController
 Route::delete('/edit-tables/delete/{id}', [App\Http\Controllers\EditTablesController::class, 'destroy'])->name('delete');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login'])->name('login');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
