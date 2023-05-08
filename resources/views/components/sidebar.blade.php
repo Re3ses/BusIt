@@ -23,8 +23,23 @@
                 <a class="fa-solid fa-circle-info onHoverYellow" href="/#about"><span
                         class="sidebar-txt">About</span></a>
             </li>
+            @auth
+                <li class="sidebar-button">
+                    <a class="fa-solid fa-pen-to-square onHoverYellow" href="/edit-tables"><span
+                            class="sidebar-txt">Manage</span></a>
+                </li>
+            @endauth
         </ol>
         <ol class="sidebar-btns h-25 d-flex flex-column justify-content-end align-items-center flex-column py-4">
+            @auth
+            <li class="sidebar-button">
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <button type="submit" style="background-color: transparent; font-size: 1rem"><i class="fa-solid fa-right-from-bracket onHoverYellow" href="/edit-tables"><span class="sidebar-txt">Sign out</span></i></button>
+                </form>
+                {{-- <a class="fa-solid fa-right-from-bracket onHoverYellow" href="/edit-tables"><span class="sidebar-txt">Sign out</span></a> --}}
+            </li>
+            @endauth
             <li class="sidebar-button">
                 <a class="fa-solid fa-gear onHoverYellow" href="#"><span class="sidebar-txt">Settings</span></a>
             </li>
