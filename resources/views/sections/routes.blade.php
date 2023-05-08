@@ -13,7 +13,6 @@
                 <option value="Polangui">Polangui</option>
             </select>
         </div>
-       
     </div>
     <div class="row table-bg rounded flex-row py-3">
         {{-- Trips display table --}}

@@ -14,15 +14,15 @@
         @include('sections.routes')
     </section>
     {{-- News section --}}
-    <section class="w-100 vh-100 news shadow" id="news">
-        
+    <section class="w-100 news shadow" id="news">
+        @include('sections.news')
     </section>
     {{-- Map section --}}
-    <section class="w-100 vh-100 map shadow" id="map">
-        
+    <section class="w-100 map shadow" id="map">
+        @include('sections.map')
     </section>
     {{-- About section --}}
-    <section class="w-100 vh-100 about shadow" id="about">
-        
+    <section class="w-100 about shadow" id="about">
+        @include('sections.about')
     </section>
 @endsection

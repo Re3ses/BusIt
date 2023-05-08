@@ -5,7 +5,7 @@
         </a>
         <div class="d-flex align-content-center justify-content-center h-75">
             <div class="vr mx-3"></div>
-            <a href="/login" class="fs-5 fw-semibold d-flex align-items-center">
+            <a href="/login" class="fs-5 fw-semibold d-flex align-items-center onHoverYellow">
                 <p class="my-auto">MANAGE</p>
             </a>
         </div>

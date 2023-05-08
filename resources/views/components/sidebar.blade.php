@@ -5,29 +5,30 @@
         </button>
         <ol class="sidebar-btns d-flex flex-column align-items-center pt-4">
             <li class="sidebar-button">
-                <a class="fa-solid fa-house" href="#landing"><span class="sidebar-txt">Home</span></a>
+                <a class="fa-solid fa-house onHoverYellow" href="#landing"><span class="sidebar-txt">Home</span></a>
             </li>
             <li class="sidebar-button">
-                <a class="fa-solid fa-cloud" href="#weather"><span class="sidebar-txt">Weather</span></a>
+                <a class="fa-solid fa-cloud onHoverYellow" href="#weather"><span class="sidebar-txt">Weather</span></a>
             </li>
             <li class="sidebar-button">
-                <a class="fa-solid fa-bus" href="#routes"><span class="sidebar-txt">Routes</span></a>
+                <a class="fa-solid fa-bus onHoverYellow" href="#routes"><span class="sidebar-txt">Routes</span></a>
             </li>
             <li class="sidebar-button">
-                <a class="fa-solid fa-newspaper" href="#news"><span class="sidebar-txt">News</span></a>
+                <a class="fa-solid fa-newspaper onHoverYellow" href="#news"><span class="sidebar-txt">News</span></a>
             </li>
             <li class="sidebar-button">
-                <a class="fa-solid fa-map" href="#map"><span class="sidebar-txt">Map</span></a>
+                <a class="fa-solid fa-map onHoverYellow" href="#map"><span class="sidebar-txt">Map</span></a>
             </li>
             <li class="sidebar-button">
-                <a class="fa-solid fa-circle-info" href="#about"><span class="sidebar-txt">About</span></a>
+                <a class="fa-solid fa-circle-info onHoverYellow" href="#about"><span
+                        class="sidebar-txt">About</span></a>
             </li>
         </ol>
-        <div class="d-flex flex-column py-4">
-            <a href="#">
-                <i class="fa-solid fa-gear"><span class="sidebar-txt">Settings</span></i>
-            </a>
-        </div>
+        <ol class="sidebar-btns h-25 d-flex flex-column justify-content-end align-items-center flex-column py-4">
+            <li class="sidebar-button">
+                <a class="fa-solid fa-gear onHoverYellow" href="#"><span class="sidebar-txt">Settings</span></a>
+            </li>
+        </ol>
     </div>
 
 </div>

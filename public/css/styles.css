@@ -17,6 +17,10 @@ div, section {
     box-shadow: none  ;
 }
 
+.onHoverYellow:hover {
+    color: #f0c808;
+}
+
 .sidebar {
     z-index: 999;
     height: 100vh;
@@ -90,7 +94,7 @@ div, section {
 }
 
 .inset-shadow {
-    box-shadow: .5rem .5rem 1rem rgba($black, .5) inset;
+    box-shadow: .5rem .5rem 1rem rgba(black, .5) inset;
 }
 
 .landing { 
@@ -152,3 +156,18 @@ div, section {
     height: 25vh;
 }
 
+.news {
+    height: 50vh;
+}
+
+.map {
+    height: 100vh;
+}
+
+.about {
+    height: 75vh;
+}
+
+.about-logo {
+    height: 10rem;
+}
