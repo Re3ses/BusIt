@@ -1,6 +1,6 @@
 <div class="container-fluid flex-column px-5 py-3 h-100 w-100">
     {{-- Weather title and select tag --}}
-    <div class="row px-3">
+    <div class="row px-3 h-25">
         <h1 class="fs-1 col-1 me-5">Weather</h1>
         <div class="col-2 d-flex align-items-center justify-content-center">
             <select class="form-select form-select-sm" id="citySelector" aria-label="Default select example">
@@ -13,21 +13,21 @@
                 <option value="Polangui">Polangui</option>
             </select>
         </div>
-        <hr>
+        {{-- <hr> --}}
     </div>
     {{-- Weather display --}}
-    <div class="row px-5 d-flex align-items-center justify-content-center">
-        <div class="col-3 weather-main d-flex align-items-center justify-content-center">
-            <img src={{ $weatherData['iconUrl'] }} alt="Weather Icon" id="weather-icon"></img>
-            <div class="container my-auto">
+    <div class="row h-75 px-5 d-flex align-items-center justify-content-center">
+        <div class="col weather-main d-flex align-items-center justify-content-center">
+            <img src={{ $weatherData['iconUrl'] }} alt="Weather Icon" id="weather-icon class="col-1"></img>
+            <div class="col-2 container my-auto">
                 <h2 id="weather-location">{{ $weatherData['location'] }}</h2>
                 <p id="weather-description">{{ $weatherData['description'] }}</p>
             </div>
-        </div>
-        <div class="col-3 d-flex flex-column align-items-center justify-content-center">
-            <p class="w-50" id="weather-temperature">{{ $weatherData['temperature'] }} °C</p>
-            <p class="w-50" id="weather-humidity">{{ $weatherData['humidity'] }} %</p>
-            <p class="w-50" id="weather-rain">{{ $weatherData['rain'] }} @if($weatherData['rain'] != "n/a")mm @endif</p>
+            <div class="col-2 d-flex flex-column align-items-center justify-content-center">
+                <p class="w-50" id="weather-temperature">{{ $weatherData['temperature'] }} °C</p>
+                <p class="w-50" id="weather-humidity">{{ $weatherData['humidity'] }} %</p>
+                <p class="w-50" id="weather-rain">{{ $weatherData['rain'] }} @if($weatherData['rain'] != "n/a")mm @endif</p>
+            </div>
         </div>
     </div>
 </div>
