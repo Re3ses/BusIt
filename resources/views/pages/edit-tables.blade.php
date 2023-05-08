@@ -24,8 +24,6 @@
                     <input type="text" name="" id="busNo" placehold="required" required>
                     <label for="busLiner">Bus Liner</label>
                     <input type="text" name="" id="busLiner">
-                    <label for="busDriver">Bus Driver</label>
-                    <input type="text" name="" id="busDriver">
                     <label for="departure">Departure TimeS</label>
                     <input type="time" name="" id="departure">
                     <input type="submit" value="ADD">
@@ -68,7 +66,7 @@
                                         <td>{{ $row->arrival_time ?? 'N/A' }}</td>
                                         <td>{{ $row->bus_routes->route_distance ?? 'N/A' }}</td>
                                         <td>{{ $row->bus_routes->route_fare ?? 'N/A' }}/ km</td>
-                                        <td>{{ $row->bus_drivers->driver_name ?? 'N/A' }}</td>
+                                        <td>{{ $row->bus_data->bus_driver ?? 'N/A' }}</td>
                                         <td>{{ $row->bus_data->bus_company ?? 'N/A' }}</td>
                                     </tr>
                                 @endforeach
@@ -79,4 +77,43 @@
             </div>
         </div>
     </section>
+    <script>
+            // Listen for changes to the select element
+            $('#routeSelector').on('change', function() {
+                // Get the selected option value
+                var selectedOption = $(this).val();
+
+                // Make an AJAX request to get the updated table data
+                $.ajax({
+                    type: 'PUT',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    url: '/routes/' + selectedOption, // Replace with the URL to your PHP script
+                    //data: { route: selectedOption },
+                    success: function(response) {
+                    // Update the table with the new data
+                        var tableBody = $("#routeTable tbody");
+
+                        tableBody.empty();
+
+                        response.forEach(function(row) {
+                            var tr = $("<tr>");
+                            tr.append($("<td>").text(row.bus_data.bus_number ?? 'N/A'));
+                            tr.append($("<td>").text(row.departure_time ?? 'N/A'));
+                            tr.append($("<td>").text(row.arrival_time ?? 'N/A'));
+                            tr.append($("<td>").text((row.bus_routes.route_distance ?? 'N/A') + ' km'));
+                            tr.append($("<td>").text((row.bus_routes.route_fare ?? 'N/A') + '/ km'));
+                            tr.append($("<td>").text(row.bus_data.bus_driver ?? 'N/A'));
+                            tr.append($("<td>").text(row.bus_data.bus_company ?? 'N/A'));
+                            tableBody.append(tr);
+                        });
+                    },
+
+                    error: function(xhr, status, error) {
+                        console.log(xhr.responseText);
+                    }
+                });
+            });
+        </script>
 @endsection

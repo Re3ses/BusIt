@@ -16,7 +16,7 @@ class BusTripsController extends Controller
         $city = $whichRoute ? $whichRoute : 'Daet'; // defaults to Iriga city if the argument is empty.
 
         //$tripsData = Bus_Trips::with(['bus_data', 'bus_drivers', 'bus_routes'])->get();
-        $tripsData = Bus_Trips::with(['bus_data', 'bus_drivers', 'bus_routes'])
+        $tripsData = Bus_Trips::with(['bus_data', 'bus_routes'])
             ->whereHas('bus_routes', function ($query) use ($city) {
             $query->where('route_destination', $city);
         })->get();

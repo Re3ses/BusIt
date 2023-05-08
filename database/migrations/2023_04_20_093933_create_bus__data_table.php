@@ -16,9 +16,8 @@ return new class extends Migration
             $table->timestamps();
             $table->smallInteger('bus_number');
             $table->string('bus_platenumber');
-            $table->string('bus_model');
+            $table->string('bus_driver');
             $table->string('bus_company');
-            $table->smallInteger('bus_capacity');
         });
     }
 

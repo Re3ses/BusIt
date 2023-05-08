@@ -10,9 +10,6 @@ class Bus_Trips extends Model
 {
     use HasFactory;
 
-    public function Bus_Drivers(){
-        return $this->belongsTo(Bus_Drivers::class, 'driver_id', 'id');
-    }
     public function Bus_Data(){
         return $this->belongsTo(Bus_Data::class, 'bus_id', 'id');
     }
