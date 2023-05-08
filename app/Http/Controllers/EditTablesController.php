@@ -13,5 +13,18 @@ class editTablesController extends Controller
 
         return view('pages.edit-tables', compact('tripsData'));
     }
+//hello from noel
+    public function store()
+    {
+        // store in public folder
+        $product = Bus_Trips::create([
+            'departure_time' => $request['product_name'],
+            'price' => $request['product_price'],
+            'user_id' => Auth::id()
+        ]);
+        return redirect('shop');
+    }
+
+
 
 }

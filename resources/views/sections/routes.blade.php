@@ -36,7 +36,7 @@
                             <td>{{ $row->arrival_time ?? 'N/A'}}</td>
                             <td>{{ $row->bus_routes->route_distance ?? 'N/A'}} km</td>
                             <td>{{ $row->bus_routes->route_fare ?? 'N/A' }}/ km</td>
-                            <td>{{ $row->bus_drivers->driver_name ?? 'N/A' }}</td>
+                            <td>{{ $row->bus_routes->bus_driver ?? 'N/A' }}</td>
                             <td>{{ $row->bus_data->bus_company ?? 'N/A' }}</td>
                         </tr>
                     @endforeach
@@ -73,7 +73,7 @@
                     tr.append($("<td>").text(row.arrival_time ?? 'N/A'));
                     tr.append($("<td>").text((row.bus_routes.route_distance ?? 'N/A') + ' km'));
                     tr.append($("<td>").text((row.bus_routes.route_fare ?? 'N/A') + '/ km'));
-                    tr.append($("<td>").text(row.bus_drivers.driver_name ?? 'N/A'));
+                    tr.append($("<td>").text(row.bus_data.bus_driver ?? 'N/A'));
                     tr.append($("<td>").text(row.bus_data.bus_company ?? 'N/A'));
                     tableBody.append(tr);
                 });
