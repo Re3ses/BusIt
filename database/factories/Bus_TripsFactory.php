@@ -26,7 +26,6 @@ class Bus_TripsFactory extends Factory
             'user_id' => $this->faker->randomElement(User::pluck('id')),
             'route_id' => $this->faker->randomElement(Bus_Routes::pluck('id')),
             'departure_time'=> $this->faker->time(),
-            'arrival_time' => $this->faker->time(),
         ];
     }
 }

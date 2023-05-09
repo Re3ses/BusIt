@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Bus_Trips;
+use Auth;
 
 class editTablesController extends Controller
 {
@@ -19,14 +21,18 @@ class editTablesController extends Controller
     {
         // Validate the form input
         $validatedData = $request->validate([
-            'busNo' => 'required|exists:bus__data,bus_number',
-            'departure' => 'required|date_format:Y-m-d H:i:s',
+            'busNo' => 'required|exists:bus__data,bus_number'
             // Add other validation rules as needed
         ]);
 
         // Get the bus ID based on the bus number
         $busId = DB::table('bus__data')
             ->where('bus_number', $request['busNo'])
+            ->pluck('id')
+            ->first();
+
+        $busDriver = DB::table('bus__routes')
+            ->where('route_destination', $request['destination'])
             ->pluck('id')
             ->first();
 
@@ -46,7 +52,7 @@ class editTablesController extends Controller
             'departure_time' => $request['departure'],
             'user_id' => Auth::id(),
             'bus_id' => $busId,
-            'route_id' => $request['destination']
+            'route_id' => $busDriver
         ]);
         return redirect('/bus_trips');
     }

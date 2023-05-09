@@ -18,7 +18,6 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('route_id');
             $table->time('departure_time');
-            $table->time('arrival_time');
 
             $table->foreign('bus_id')
               ->references('id')->on('bus__data')->onUpdate('cascade')->onDelete('cascade');
