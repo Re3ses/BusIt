@@ -21,11 +21,11 @@ class editTablesController extends Controller
         $busid = $request['busid_input'];
 
         $product = Bus_Trips::create([
-            'departure_time' => $request['departure_input'],
+            'departure_time' => $request['departure'],
             'arrival' => $request['arrival_input'],
             'user_id' => Auth::id(),
-            //'bus_id' =>,
-            //'route_id' =>
+            'bus_id' => $request['bus_Liner'],
+            'route_id' => $request['route_input']
         ]);
         return redirect('shop');
     }
