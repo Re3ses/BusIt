@@ -19,4 +19,11 @@ class Bus_Trips extends Model
     public function User(){
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
+
+    protected $fillable = [
+        "user_id",
+        "bus_id",
+        "route_id",
+        "departure_time"
+    ];
 }

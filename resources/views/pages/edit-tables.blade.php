@@ -8,6 +8,7 @@
                     <h1>Trips Table</h1>
                 </label>
                 <form method="POST" action="{{ route('store') }}"  id="tripTable" class="">
+                    @csrf
                     <label for="destination">Destination</label>
                     <div class="col-2 py-3 d-flex align-items-center justify-content-center">
                         <select class="form-select form-select-sm " name="destination" id="destination"
@@ -21,11 +22,9 @@
                         </select>
                     </div>
                     <label for="busNo">Bus Number</label>
-                    <input type="text" name="" id="busNo" placehold="required" required>
-                    <label for="busLiner">Bus Liner</label>
-                    <input type="text" name="" id="busLiner">
+                    <input type="text" name="busNo" id="busNo" placehold="required" required>
                     <label for="departure">Departure TimeS</label>
-                    <input type="time" name="" id="departure">
+                    <input type="time" name="departure" id="departure">
                     <input type="submit" value="ADD">
                 </form>
             </div>

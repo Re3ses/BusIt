@@ -18,8 +18,8 @@ Route::put('/routes/{whichRoute}', [App\Http\Controllers\BusTripsController::cla
 Route::put('/weather/{whichCity}', [\App\Http\Controllers\WeatherController::class, 'getWeather']);
 
 Route::get('/edit-tables', [\App\Http\Controllers\EditTablesController::class, 'index'])->name('tables');
-Route::post('/edit-tables/store', [App\Http\Controllers\ProductController::class, 'store'])->name('store');
-Route::patch('/edit-tables/update/{id}', [App\Http\Controllers\ProductController::class, 'update'])->name('update');
+Route::post('/edit-tables/store', [App\Http\Controllers\EditTablesController::class, 'store'])->name('store');
+Route::patch('/edit-tables/update/{id}', [App\Http\Controllers\EditTablesController::class, 'update'])->name('update');
 Route::delete('/edit-tables/delete/{id}', [App\Http\Controllers\EditTablesController::class, 'destroy'])->name('delete');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
