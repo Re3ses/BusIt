@@ -103,6 +103,7 @@ div, section {
     background-image: url("/images/pexels-chriz-luminario-2798477.jpg");
     background-size: cover;
     z-index: 1;
+    margin-bottom: 10rem;
 }
 
 .landing-bar {
@@ -139,6 +140,7 @@ div, section {
     background-image: url("/images/bicolTerminal.png");
     background-size: cover;
     height: 75vh;
+    margin-bottom: 10rem;
 }
 
 .table-bg {
@@ -152,9 +154,9 @@ div, section {
 
 .weather {
     color: white;
-    background-image: linear-gradient(rgba(6, 10, 71, 0.281), #00000000);
-    /* background-image: url("/images/pexels-pixabay-158827.jpg"); */
-    background-color: rgb(195, 227, 245);
+    /* background-image: linear-gradient(rgba(6, 10, 71, 0.603), #00000000); */
+    background-image: url("/images/pexels-pixabay-158827.png");
+    /* background-color: rgb(195, 227, 245); */
     background-size: cover;
     height: 25vh;
 }
@@ -182,6 +184,7 @@ div, section {
 
 .map {
     height: 100vh;
+    margin-bottom: 20rem;
 }
 
 #map {

@@ -1,4 +1,5 @@
 <div class="container-fluid flex-column px-5 py-3 h-100 w-100">
+<div class="weatherShade"></div>
     {{-- Weather title and select tag --}}
     <div class="row px-3 h-25">
         <h1 class="fs-1 col-1 me-5">Weather</h1>
