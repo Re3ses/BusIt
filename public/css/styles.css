@@ -190,20 +190,6 @@ div, section {
 #map {
     height: 80vh;
 }
-
-.carousel-item img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  object-position: center;
-}
-
-.carousel-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
   
 .about {
     height: 75vh;

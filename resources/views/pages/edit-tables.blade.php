@@ -8,10 +8,10 @@
                     <label for="tripTable">
                         <h1>Trips Table</h1>
                     </label>
-                    <form method="POST" action="{{ route('store') }}" id="tripTable" class="">
+                    <form method="POST" action="{{ route('store') }}" id="tripTable" class="d-flex align-items-center gap-5">
                         @csrf
-                        <label for="destination">Destination</label>
-                        <div class="col-2 py-3 d-flex align-items-center justify-content-center">
+                        <label class="h-25" for="destination">Destination:</label>
+                        <div class="col-2 py-3 d-flex align-items-center justify-content-center flex-column">
                             <select class="form-select form-select-sm " name="destination" id="destination"
                                 aria-label="Default select example" required>
                                 <option value="" selected>Select Location</option>
@@ -22,16 +22,20 @@
                                 <option value="Polangui">Polangui</option>
                             </select>
                         </div>
-                        <label for="busNo">Bus Number</label>
 
-                        <select name="busNo" id="">
-                            @foreach ($bus_data as $bus_num)
-                                <option value="{{ $bus_num['bus_number'] }}">{{ $bus_num['bus_number'] }}</option>
-                            @endforeach
+                        <label class="h-25" for="busNo">Bus Number:</label>
+                        <div class="col-2 py-3 d-flex align-items-center justify-content-center flex-column">
+                            <select class="form-select form-select-sm" name="busNo" id="">
+                                @foreach ($bus_data as $bus_num)
+                                    <option value="{{ $bus_num['bus_number'] }}">{{ $bus_num['bus_number'] }}</option>
+                                @endforeach
+                            </select>
+                        </div>
 
-                        </select>
-                        <label for="departure">Departure Time</label>
-                        <input type="time" name="departure" id="departure">
+                        <label class="h-25" for="departure">Departure Time:</label>
+                        <div class="col-2 py-3 d-flex align-items-center justify-content-center flex-column">
+                            <input type="time" name="departure" id="departure">
+                        </div>
                         <input type="submit" value="ADD">
                     </form>
                 </div>
@@ -117,7 +121,8 @@
                                 <form>
                                     <div class="form-group">
                                         <label for="edit-bus-number" class="col-form-label py-1">Bus Number:</label>
-                                        <input type="text" value="insert code for bus number ehre" class="form-control" id="edit-bus-number" disabled>
+                                        <input type="text" value="insert code for bus number ehre" class="form-control"
+                                            id="edit-bus-number" disabled>
                                         <label for="edit-departure" class="py-1">Bus Departure: </label>
                                         <input type="time" class="py-1" name="departure" id="edit-departure">
                                     </div>
