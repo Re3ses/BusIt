@@ -7,7 +7,7 @@
                 <label for="tripTable">
                     <h1>Trips Table</h1>
                 </label>
-                <form action="" id="tripTable" class="">
+                <form method="POST" action="{{ route('store') }}"  id="tripTable" class="">
                     <label for="destination">Destination</label>
                     <div class="col-2 py-3 d-flex align-items-center justify-content-center">
                         <select class="form-select form-select-sm " name="destination" id="destination"
