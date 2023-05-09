@@ -151,15 +151,33 @@ div, section {
 }
 
 .weather {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3), #00000000);
+    color: white;
+    background-image: linear-gradient(rgba(22, 2, 53, 0.596), #00000000);
     /* background-image: url("/images/pexels-pixabay-158827.jpg"); */
-    background-color: rgb(182, 209, 226);
+    background-color: rgb(195, 227, 245);
     background-size: cover;
     height: 25vh;
 }
 
 .news {
-    height: 50vh;
+    height: 100vh;
+    background-image: url('/images/newsBg.jpg');
+    background-size: cover;
+}
+
+.news h3 {
+    font-weight: bold;
+}
+
+.newsBit {
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: .5rem .3rem;
+    width: auto;
+    background-color: rgba(255, 255, 255, .80);
+    box-shadow: 0 2rem .1rem rgba(rgb(0, 0, 0));
 }
 
 .map {
