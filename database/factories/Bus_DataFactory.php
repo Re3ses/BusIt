@@ -19,7 +19,7 @@ class Bus_DataFactory extends Factory
     public function definition(): array
     {
         return [
-            'bus_number' => $this->faker->numberBetween($min = 0, $max = 4000),
+            'bus_number' => $this->faker->numberBetween($min = 100, $max = 999),
             'bus_platenumber' => $this->faker->numberBetween($min = 1000, $max = 9000),
             'bus_driver' => $this->faker->name(),
             'bus_company' => $this->faker->company(),

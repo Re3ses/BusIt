@@ -15,9 +15,11 @@ class editTablesController extends Controller
     }
 //hello from noel
 
-    public function store()
+    public function store(Request $request)
     {
         // store in public folder
+        $busid = $request['busid_input'];
+
         $product = Bus_Trips::create([
             'departure_time' => $request['departure_input'],
             'arrival' => $request['arrival_input'],
