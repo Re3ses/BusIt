@@ -152,7 +152,7 @@ div, section {
 
 .weather {
     color: white;
-    background-image: linear-gradient(rgba(22, 2, 53, 0.596), #00000000);
+    background-image: linear-gradient(rgba(6, 10, 71, 0.281), #00000000);
     /* background-image: url("/images/pexels-pixabay-158827.jpg"); */
     background-color: rgb(195, 227, 245);
     background-size: cover;
