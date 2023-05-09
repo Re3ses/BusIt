@@ -16,10 +16,10 @@
         {{-- <hr> --}}
     </div>
     {{-- Weather display --}}
-    <div class="row h-75 px-5 d-flex align-items-center justify-content-center">
+    <div class="row h-75 px-5 d-flex align-items-center justify-content-start">
         <div class="col weather-main d-flex align-items-center justify-content-center">
-            <img src={{ $weatherData['iconUrl'] }} alt="Weather Icon" id="weather-icon class="col-1"></img>
-            <div class="col-2 container my-auto">
+            <img src={{ $weatherData['iconUrl'] }} alt="Weather Icon" id="weather-icon class="col-2 align-self-start"></img>
+            <div class="col-1 align-items-start">
                 <h2 id="weather-location">{{ $weatherData['location'] }}</h2>
                 <p id="weather-description">{{ $weatherData['description'] }}</p>
             </div>
