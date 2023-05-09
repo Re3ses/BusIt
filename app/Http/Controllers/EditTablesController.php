@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Bus_Trips;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class editTablesController extends Controller
 {
