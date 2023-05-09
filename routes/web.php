@@ -25,6 +25,7 @@ Route::put('/routes/{whichRoute}', [App\Http\Controllers\BusTripsController::cla
 Route::put('/weather/{whichCity}', [\App\Http\Controllers\WeatherController::class, 'getWeather']);
 
 Route::get('/edit-tables', [\App\Http\Controllers\EditTablesController::class, 'index'])->name('tables')->middleware('auth');
+Route::put('/routes/{whichRoute}', [App\Http\Controllers\BusTripsController::class, 'getTrips']);
 Route::post('/edit-tables/store', [App\Http\Controllers\EditTablesController::class, 'store'])->name('store');
 Route::patch('/edit-tables/update/{id}', [App\Http\Controllers\EditTablesController::class, 'update'])->name('update');
 Route::delete('/edit-tables/delete/{id}', [App\Http\Controllers\EditTablesController::class, 'destroy'])->name('delete');
