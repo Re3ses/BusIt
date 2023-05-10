@@ -34,7 +34,7 @@ class editTablesController extends Controller
             ->pluck('id')
             ->first();
 
-        $busDriver = DB::table('bus__routes')
+        $busRoute = DB::table('bus__routes')
             ->where('route_destination', $request['destination'])
             ->pluck('id')
             ->first();
@@ -51,15 +51,35 @@ class editTablesController extends Controller
         // // Redirect the user to a new page
         // return redirect('/bus_trips');
         
-        $product = Bus_Trips::create([
+        $trip = Bus_Trips::create([
             'departure_time' => $request['departure'],
             'user_id' => Auth::id(),
             'bus_id' => $busId,
-            'route_id' => $busDriver
+            'route_id' => $busRoute
         ]);
-        return redirect('home');
+        return redirect('edit-tables');
     }
 
+    public function update(Request $request, $id)
+    {
+        $busRoute = DB::table('bus__routes')
+            ->where('route_destination', $request['destination'])
+            ->pluck('id')
+            ->first();
 
+        $trip = Bus_Trips::find($id);
+        $trip->departure_time = $request->departure;
+        $trip->bus_id = $request->product_price;
+        $trip->route_id = $busRoute;
+        $trip->save();
+        return redirect("edit-tables");
+    }
 
+    public function destroy($id)
+    {
+        $trip = Bus_Trips::find($id);
+
+        $trip->delete();
+        return redirect("edit-tables");
+    }
 }
