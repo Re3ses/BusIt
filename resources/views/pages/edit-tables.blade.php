@@ -94,7 +94,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <form action="/edit-tables/delete/{{ $row->bus_data->bus_numer ?? null }}"
+                                            <form action="/edit-tables/delete/{{$row->id}}" method = "POST"
                                                 class="d-flex align-items-center">
                                                 @csrf
                                                 @method('DELETE')
