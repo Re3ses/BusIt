@@ -103,6 +103,7 @@ div, section {
     background-image: url("/images/pexels-chriz-luminario-2798477.jpg");
     background-size: cover;
     z-index: 1;
+    margin-bottom: 10rem;
 }
 
 .landing-bar {
@@ -139,6 +140,7 @@ div, section {
     background-image: url("/images/bicolTerminal.png");
     background-size: cover;
     height: 75vh;
+    margin-bottom: 10rem;
 }
 
 .table-bg {
@@ -151,21 +153,44 @@ div, section {
 }
 
 .weather {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3), #00000000);
-    /* background-image: url("/images/pexels-pixabay-158827.jpg"); */
-    background-color: rgb(182, 209, 226);
+    color: white;
+    /* background-image: linear-gradient(rgba(6, 10, 71, 0.603), #00000000); */
+    background-image: url("/images/pexels-pixabay-158827.png");
+    /* background-color: rgb(195, 227, 245); */
     background-size: cover;
     height: 25vh;
 }
 
 .news {
-    height: 50vh;
+    height: 100vh;
+    background-image: url('/images/newsBg.jpg');
+    background-size: cover;
+}
+
+.news h3 {
+    font-weight: bold;
+}
+
+.newsBit {
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: .5rem .3rem;
+    width: auto;
+    background-color: rgba(255, 255, 255, .80);
+    box-shadow: 0 2rem .1rem rgba(rgb(0, 0, 0));
 }
 
 .map {
     height: 100vh;
+    margin-bottom: 20rem;
 }
 
+#map {
+    height: 80vh;
+}
+  
 .about {
     height: 75vh;
 }
